@@ -1,0 +1,169 @@
+Microsoft Windows [Version 10.0.22631.3880]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\poiut>npx create-react-app product-tracking-frontend
+Need to install the following packages:
+create-react-app@5.0.1
+Ok to proceed? (y) cd product-tracking-frontend
+
+npm error canceled
+npm error A complete log of this run can be found in: C:\Users\poiut\AppData\Local\npm-cache\_logs\2024-08-05T15_32_31_910Z-debug-0.log
+
+C:\Users\poiut>npx create-react-app product-tracking-frontend
+Need to install the following packages:
+create-react-app@5.0.1
+Ok to proceed? (y) y
+
+npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm warn deprecated fstream-ignore@1.0.5: This package is no longer supported.
+npm warn deprecated uid-number@0.0.6: This package is no longer supported.
+npm warn deprecated rimraf@2.7.1: Rimraf versions prior to v4 are no longer supported
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+npm warn deprecated fstream@1.0.12: This package is no longer supported.
+npm warn deprecated tar@2.2.2: This version of tar is no longer supported, and will not receive security updates. Please upgrade asap.
+
+Creating a new React app in C:\Users\poiut\product-tracking-frontend.
+
+Installing packages. This might take a couple of minutes.
+Installing react, react-dom, and react-scripts with cra-template...
+
+
+added 1480 packages in 59s
+
+261 packages are looking for funding
+  run `npm fund` for details
+Git repo not initialized Error: Command failed: git --version
+    at genericNodeError (node:internal/errors:984:15)
+    at wrappedFn (node:internal/errors:538:14)
+    at checkExecSyncError (node:child_process:890:11)
+    at execSync (node:child_process:962:15)
+    at tryGitInit (C:\Users\poiut\product-tracking-frontend\node_modules\react-scripts\scripts\init.js:46:5)
+    at module.exports (C:\Users\poiut\product-tracking-frontend\node_modules\react-scripts\scripts\init.js:276:7)
+    at [eval]:3:14
+    at runScriptInThisContext (node:internal/vm:209:10)
+    at node:internal/process/execution:118:14
+    at [eval]-wrapper:6:24 {
+  status: 1,
+  signal: null,
+  output: [ null, null, null ],
+  pid: 9452,
+  stdout: null,
+  stderr: null
+}
+
+Installing template dependencies using npm...
+
+added 63 packages, and changed 1 package in 9s
+
+261 packages are looking for funding
+  run `npm fund` for details
+Removing template package using npm...
+
+
+removed 1 package, and audited 1543 packages in 3s
+
+261 packages are looking for funding
+  run `npm fund` for details
+
+8 vulnerabilities (2 moderate, 6 high)
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+
+Success! Created product-tracking-frontend at C:\Users\poiut\product-tracking-frontend
+Inside that directory, you can run several commands:
+
+  npm start
+    Starts the development server.
+
+  npm run build
+    Bundles the app into static files for production.
+
+  npm test
+    Starts the test runner.
+
+  npm run eject
+    Removes this tool and copies build dependencies, configuration files
+    and scripts into the app directory. If you do this, you can’t go back!
+
+We suggest that you begin by typing:
+
+  cd product-tracking-frontend
+  npm start
+
+Happy hacking!
+
+C:\Users\poiut>npx create-react-app product-tracking-frontend
+The directory product-tracking-frontend contains files that could conflict:
+
+  node_modules/
+  package-lock.json
+  package.json
+  public/
+  src/
+
+Either try using a new directory name, or remove the files listed above.
+
+C:\Users\poiut>cd product-tracking-frontend
+
+C:\Users\poiut\product-tracking-frontend>npm install ethers@^5.0.0 qrcode.react react-toastify geofenc
+ing
+
+added 48 packages, and audited 1591 packages in 20s
+
+291 packages are looking for funding
+  run `npm fund` for details
+
+23 vulnerabilities (12 low, 2 moderate, 9 high)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+
+C:\Users\poiut\product-tracking-frontend>npx hardhat compile
+Error HH1: You are not inside a Hardhat project.
+
+For more info go to https://hardhat.org/HH1 or run Hardhat with --show-stack-traces
+
+C:\Users\poiut\product-tracking-frontend>cd ..
+
+C:\Users\poiut>npx hardhat run scripts/deploy.js --network ropsten
+Error HH1: You are not inside a Hardhat project.
+
+For more info go to https://hardhat.org/HH1 or run Hardhat with --show-stack-traces
+
+C:\Users\poiut>cd Documents
+
+C:\Users\poiut\Documents>ls
+'ls' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\poiut\Documents>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 86AC-EB6E
+
+ Directory of C:\Users\poiut\Documents
+
+08/05/2024  11:19 PM    <DIR>          .
+08/06/2024  01:49 AM    <DIR>          ..
+08/06/2024  01:49 AM    <DIR>          product-tracking
+               0 File(s)              0 bytes
+               3 Dir(s)  68,219,260,928 bytes free
+
+C:\Users\poiut\Documents>cd product-tracking
+
+C:\Users\poiut\Documents\product-tracking>npx hardhat run scripts/deploy.js --network ropsten
+Error HH100: Network ropsten doesn't exist
+
+For more info go to https://hardhat.org/HH100 or run Hardhat with --show-stack-traces
+
+C:\Users\poiut\Documents\product-tracking>npx hardhat run scripts/deploy.js
+ProductTracking deployed to: 0x5FbDB2315678afecb367f032d93F642f64180aa3
+
+C:\Users\poiut\Documents\product-tracking>npx hardhat run scripts/deploy.js

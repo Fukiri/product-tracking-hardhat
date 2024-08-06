@@ -1,0 +1,967 @@
+Microsoft Windows [Version 10.0.22631.3880]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\poiut>cd Documents
+
+C:\Users\poiut\Documents>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 86AC-EB6E
+
+ Directory of C:\Users\poiut\Documents
+
+08/05/2024  11:19 PM    <DIR>          .
+08/06/2024  01:49 AM    <DIR>          ..
+08/06/2024  01:49 AM    <DIR>          product-tracking
+               0 File(s)              0 bytes
+               3 Dir(s)  68,161,884,160 bytes free
+
+C:\Users\poiut\Documents>cd product-tracking
+
+C:\Users\poiut\Documents\product-tracking>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 86AC-EB6E
+
+ Directory of C:\Users\poiut\Documents\product-tracking
+
+08/06/2024  01:49 AM    <DIR>          .
+08/05/2024  11:19 PM    <DIR>          ..
+08/05/2024  11:32 PM               257 .gitignore
+08/06/2024  12:12 AM    <DIR>          artifacts
+08/06/2024  12:12 AM    <DIR>          cache
+08/06/2024  12:01 AM    <DIR>          contracts
+08/06/2024  01:29 AM               501 hardhat.config.js
+08/05/2024  11:32 PM    <DIR>          ignition
+08/06/2024  01:26 AM    <DIR>          node_modules
+08/06/2024  01:26 AM           251,309 package-lock.json
+08/06/2024  01:23 AM               361 package.json
+08/06/2024  01:33 AM    <DIR>          product-tracking-frontend
+08/05/2024  11:29 PM               390 README.md
+08/06/2024  12:33 AM                 0 rmdir
+08/06/2024  12:03 AM    <DIR>          scripts
+08/05/2024  11:32 PM    <DIR>          test
+               6 File(s)        252,818 bytes
+              10 Dir(s)  68,158,775,296 bytes free
+
+C:\Users\poiut\Documents\product-tracking>cd product-tracking-frontend
+
+C:\Users\poiut\Documents\product-tracking\product-tracking-frontend>npm install ethers qrcode.react react-toastify geofencing
+
+changed 1 package, and audited 1591 packages in 14s
+
+292 packages are looking for funding
+  run `npm fund` for details
+
+23 vulnerabilities (12 low, 2 moderate, 9 high)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+
+C:\Users\poiut\Documents\product-tracking\product-tracking-frontend>npm start
+
+> product-tracking-frontend@0.1.0 start
+> react-scripts start
+
+(node:17880) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:17880) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+One of your dependencies, babel-preset-react-app, is importing the
+"@babel/plugin-proposal-private-property-in-object" package without
+declaring it in its dependencies. This is currently working because
+"@babel/plugin-proposal-private-property-in-object" is already in your
+node_modules folder for unrelated reasons, but it may break at any time.
+
+babel-preset-react-app is part of the create-react-app project, which
+is not maintianed anymore. It is thus unlikely that this bug will
+ever be fixed. Add "@babel/plugin-proposal-private-property-in-object" to
+your devDependencies to work around this error. This will make this message
+go away.
+Failed to compile.
+
+SyntaxError: C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\src\App.js: Unterminated JSX contents. (114:24)
+  112 |         )}
+  113 |       </div>
+> 114 |       <ToastContainer />
+      |                         ^
+  115 |
+ERROR in ./src/App.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\src\App.js: Unterminated JSX contents. (114:24)
+
+  112 |         )}
+  113 |       </div>
+> 114 |       <ToastContainer />
+      |                         ^
+  115 |
+    at constructor (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:349:19)
+    at FlowParserMixin.raise (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:3247:19)
+    at FlowParserMixin.jsxReadToken (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:6486:20)
+    at FlowParserMixin.getTokenFromCode (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:6812:12)
+    at FlowParserMixin.getTokenFromCode (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:5317:13)
+    at FlowParserMixin.nextToken (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:2430:10)
+    at FlowParserMixin.next (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:2343:10)
+    at FlowParserMixin.eat (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:2347:12)
+    at FlowParserMixin.expect (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:3576:15)
+    at FlowParserMixin.jsxParseOpeningElementAfterName (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:6709:10)
+    at FlowParserMixin.jsxParseOpeningElementAt (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:6700:17)
+    at FlowParserMixin.jsxParseElementAt (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:6724:33)
+    at FlowParserMixin.jsxParseElementAt (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:6736:32)
+    at FlowParserMixin.jsxParseElement (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:6787:17)
+    at FlowParserMixin.parseExprAtom (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:6797:19)
+    at FlowParserMixin.parseExprSubscripts (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10562:23)
+    at FlowParserMixin.parseUpdate (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10547:21)
+    at FlowParserMixin.parseMaybeUnary (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10527:23)
+    at FlowParserMixin.parseMaybeUnaryOrPrivate (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10381:61)
+    at FlowParserMixin.parseExprOps (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10386:23)
+    at FlowParserMixin.parseMaybeConditional (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10363:23)
+    at FlowParserMixin.parseMaybeAssign (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10326:21)
+    at C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:5618:39
+    at FlowParserMixin.tryParse (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:3585:20)
+    at FlowParserMixin.parseMaybeAssign (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:5618:18)
+    at C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10296:39
+    at FlowParserMixin.allowInAnd (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:11911:12)
+    at FlowParserMixin.parseMaybeAssignAllowIn (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10296:17)
+    at FlowParserMixin.parseParenAndDistinguishExpression (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:11173:28)
+    at FlowParserMixin.parseParenAndDistinguishExpression (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:5711:18)
+    at FlowParserMixin.parseExprAtom (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10829:23)
+    at FlowParserMixin.parseExprAtom (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:6802:20)
+    at FlowParserMixin.parseExprSubscripts (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10562:23)
+    at FlowParserMixin.parseUpdate (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10547:21)
+    at FlowParserMixin.parseMaybeUnary (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10527:23)
+    at FlowParserMixin.parseMaybeUnaryOrPrivate (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10381:61)
+    at FlowParserMixin.parseExprOps (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10386:23)
+    at FlowParserMixin.parseMaybeConditional (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10363:23)
+    at FlowParserMixin.parseMaybeAssign (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10326:21)
+    at FlowParserMixin.parseMaybeAssign (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:5669:18)
+    at FlowParserMixin.parseExpressionBase (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10280:23)
+    at C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10276:39
+    at FlowParserMixin.allowInAnd (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:11906:16)
+    at FlowParserMixin.parseExpression (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10276:17)
+    at FlowParserMixin.parseReturnStatement (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:12596:28)
+    at FlowParserMixin.parseStatementContent (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:12248:21)
+    at FlowParserMixin.parseStatementLike (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:12217:17)
+    at FlowParserMixin.parseStatementLike (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:5038:24)
+    at FlowParserMixin.parseStatementListItem (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:12197:17)
+    at FlowParserMixin.parseBlockOrModuleBlockBody (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:12770:61)
+
+ERROR in [eslint]
+src\App.js
+  Line 114:24:  Parsing error: Unterminated JSX contents. (114:24)
+
+webpack compiled with 2 errors
+Compiling...
+Failed to compile.
+
+Attempted import error: 'geofencing' is not exported from 'geofencing' (imported as 'geofencing').
+ERROR in ./src/App.js 70:32-59
+export 'geofencing' (imported as 'geofencing') was not found in 'geofencing' (possible exports: GeoFence)
+
+webpack compiled with 1 error
+Compiling...
+Failed to compile.
+
+[eslint]
+src\App.js
+  Line 64:33:  'geofencing' is not defined  no-undef
+
+Search for the keywords to learn more about each error.
+WARNING in [eslint]
+src\App.js
+  Line 7:10:  'GeoFence' is defined but never used  no-unused-vars
+
+ERROR in [eslint]
+src\App.js
+  Line 64:33:  'geofencing' is not defined  no-undef
+
+Search for the keywords to learn more about each error.
+
+webpack compiled with 1 error and 1 warning
+Compiling...
+Failed to compile.
+
+SyntaxError: C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\src\App.js: Unexpected token, expected "," (112:0)
+  110 |             <p>Current Address: {productData[5]}</p>
+  111 |           </div>
+> 112 |
+      | ^
+ERROR in ./src/App.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\src\App.js: Unexpected token, expected "," (112:0)
+
+  110 |             <p>Current Address: {productData[5]}</p>
+  111 |           </div>
+> 112 |
+      | ^
+    at constructor (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:349:19)
+    at FlowParserMixin.raise (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:3247:19)
+    at FlowParserMixin.unexpected (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:3267:16)
+    at FlowParserMixin.expect (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:3577:12)
+    at FlowParserMixin.parseParenAndDistinguishExpression (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:11159:14)
+    at FlowParserMixin.parseParenAndDistinguishExpression (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:5711:18)
+    at FlowParserMixin.parseExprAtom (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10829:23)
+    at FlowParserMixin.parseExprAtom (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:6802:20)
+    at FlowParserMixin.parseExprSubscripts (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10562:23)
+    at FlowParserMixin.parseUpdate (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10547:21)
+    at FlowParserMixin.parseMaybeUnary (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10527:23)
+    at FlowParserMixin.parseMaybeUnaryOrPrivate (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10381:61)
+    at FlowParserMixin.parseExprOpBaseRightExpr (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10467:34)
+    at FlowParserMixin.parseExprOpRightExpr (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10462:21)
+    at FlowParserMixin.parseExprOp (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10429:27)
+    at FlowParserMixin.parseExprOps (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10390:17)
+    at FlowParserMixin.parseMaybeConditional (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10363:23)
+    at FlowParserMixin.parseMaybeAssign (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10326:21)
+    at FlowParserMixin.parseMaybeAssign (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:5669:18)
+    at FlowParserMixin.parseExpressionBase (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10280:23)
+    at C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10276:39
+    at FlowParserMixin.allowInAnd (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:11911:12)
+    at FlowParserMixin.parseExpression (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10276:17)
+    at FlowParserMixin.jsxParseExpressionContainer (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:6670:31)
+    at FlowParserMixin.jsxParseElementAt (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:6749:36)
+    at FlowParserMixin.jsxParseElementAt (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:6736:32)
+    at FlowParserMixin.jsxParseElement (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:6787:17)
+    at FlowParserMixin.parseExprAtom (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:6797:19)
+    at FlowParserMixin.parseExprSubscripts (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10562:23)
+    at FlowParserMixin.parseUpdate (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10547:21)
+    at FlowParserMixin.parseMaybeUnary (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10527:23)
+    at FlowParserMixin.parseMaybeUnaryOrPrivate (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10381:61)
+    at FlowParserMixin.parseExprOps (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10386:23)
+    at FlowParserMixin.parseMaybeConditional (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10363:23)
+    at FlowParserMixin.parseMaybeAssign (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10326:21)
+    at C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:5618:39
+    at FlowParserMixin.tryParse (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:3585:20)
+    at FlowParserMixin.parseMaybeAssign (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:5618:18)
+    at C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10296:39
+    at FlowParserMixin.allowInAnd (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:11911:12)
+    at FlowParserMixin.parseMaybeAssignAllowIn (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10296:17)
+    at FlowParserMixin.parseParenAndDistinguishExpression (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:11173:28)
+    at FlowParserMixin.parseParenAndDistinguishExpression (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:5711:18)
+    at FlowParserMixin.parseExprAtom (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10829:23)
+    at FlowParserMixin.parseExprAtom (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:6802:20)
+    at FlowParserMixin.parseExprSubscripts (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10562:23)
+    at FlowParserMixin.parseUpdate (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10547:21)
+    at FlowParserMixin.parseMaybeUnary (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10527:23)
+    at FlowParserMixin.parseMaybeUnaryOrPrivate (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10381:61)
+    at FlowParserMixin.parseExprOps (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10386:23)
+
+ERROR in [eslint]
+src\App.js
+  Line 112:  Parsing error: Unexpected token, expected "," (112:0)
+
+webpack compiled with 2 errors
+Compiling...
+Failed to compile.
+
+SyntaxError: C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\src\App.js: Unexpected token, expected "}" (112:3)
+  110 |             <p>Current Address: {productData[5]}</p>
+  111 |           </div>
+> 112 |   );
+      |    ^
+  113 | }
+  114 |
+  115 | export default App;
+ERROR in ./src/App.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\src\App.js: Unexpected token, expected "}" (112:3)
+
+  110 |             <p>Current Address: {productData[5]}</p>
+  111 |           </div>
+> 112 |   );
+      |    ^
+  113 | }
+  114 |
+  115 | export default App;
+    at constructor (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:349:19)
+    at FlowParserMixin.raise (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:3247:19)
+    at FlowParserMixin.unexpected (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:3267:16)
+    at FlowParserMixin.expect (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:3577:12)
+    at FlowParserMixin.jsxParseExpressionContainer (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:6675:10)
+    at FlowParserMixin.jsxParseElementAt (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:6749:36)
+    at FlowParserMixin.jsxParseElementAt (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:6736:32)
+    at FlowParserMixin.jsxParseElement (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:6787:17)
+    at FlowParserMixin.parseExprAtom (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:6797:19)
+    at FlowParserMixin.parseExprSubscripts (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10562:23)
+    at FlowParserMixin.parseUpdate (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10547:21)
+    at FlowParserMixin.parseMaybeUnary (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10527:23)
+    at FlowParserMixin.parseMaybeUnaryOrPrivate (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10381:61)
+    at FlowParserMixin.parseExprOps (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10386:23)
+    at FlowParserMixin.parseMaybeConditional (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10363:23)
+    at FlowParserMixin.parseMaybeAssign (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10326:21)
+    at C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:5618:39
+    at FlowParserMixin.tryParse (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:3585:20)
+    at FlowParserMixin.parseMaybeAssign (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:5618:18)
+    at C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10296:39
+    at FlowParserMixin.allowInAnd (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:11911:12)
+    at FlowParserMixin.parseMaybeAssignAllowIn (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10296:17)
+    at FlowParserMixin.parseParenAndDistinguishExpression (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:11173:28)
+    at FlowParserMixin.parseParenAndDistinguishExpression (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:5711:18)
+    at FlowParserMixin.parseExprAtom (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10829:23)
+    at FlowParserMixin.parseExprAtom (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:6802:20)
+    at FlowParserMixin.parseExprSubscripts (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10562:23)
+    at FlowParserMixin.parseUpdate (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10547:21)
+    at FlowParserMixin.parseMaybeUnary (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10527:23)
+    at FlowParserMixin.parseMaybeUnaryOrPrivate (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10381:61)
+    at FlowParserMixin.parseExprOps (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10386:23)
+    at FlowParserMixin.parseMaybeConditional (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10363:23)
+    at FlowParserMixin.parseMaybeAssign (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10326:21)
+    at FlowParserMixin.parseMaybeAssign (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:5669:18)
+    at FlowParserMixin.parseExpressionBase (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10280:23)
+    at C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10276:39
+    at FlowParserMixin.allowInAnd (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:11906:16)
+    at FlowParserMixin.parseExpression (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10276:17)
+    at FlowParserMixin.parseReturnStatement (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:12596:28)
+    at FlowParserMixin.parseStatementContent (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:12248:21)
+    at FlowParserMixin.parseStatementLike (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:12217:17)
+    at FlowParserMixin.parseStatementLike (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:5038:24)
+    at FlowParserMixin.parseStatementListItem (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:12197:17)
+    at FlowParserMixin.parseBlockOrModuleBlockBody (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:12770:61)
+    at FlowParserMixin.parseBlockBody (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:12763:10)
+    at FlowParserMixin.parseBlock (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:12751:10)
+    at FlowParserMixin.parseFunctionBody (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:11596:24)
+    at FlowParserMixin.parseFunctionBody (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:5015:11)
+    at FlowParserMixin.parseFunctionBodyAndFinish (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:11582:10)
+    at FlowParserMixin.parseFunctionBodyAndFinish (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:5023:18)
+
+ERROR in [eslint]
+src\App.js
+  Line 112:3:  Parsing error: Unexpected token, expected "}" (112:3)
+
+webpack compiled with 2 errors
+Compiling...
+Compiled successfully!
+
+You can now view product-tracking-frontend in the browser.
+
+  Local:            http://localhost:3000
+  On Your Network:  http://192.168.56.1:3000
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled successfully
+Terminate batch job (Y/N)? y
+
+C:\Users\poiut\Documents\product-tracking\product-tracking-frontend>npm start
+
+> product-tracking-frontend@0.1.0 start
+> react-scripts start
+
+(node:13780) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:13780) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+Compiled successfully!
+
+You can now view product-tracking-frontend in the browser.
+
+  Local:            http://localhost:3000
+  On Your Network:  http://192.168.56.1:3000
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled successfully
+Compiling...
+Compiled successfully!
+
+You can now view product-tracking-frontend in the browser.
+
+  Local:            http://localhost:3000
+  On Your Network:  http://192.168.56.1:3000
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled successfully
+One of your dependencies, babel-preset-react-app, is importing the
+"@babel/plugin-proposal-private-property-in-object" package without
+declaring it in its dependencies. This is currently working because
+"@babel/plugin-proposal-private-property-in-object" is already in your
+node_modules folder for unrelated reasons, but it may break at any time.
+
+babel-preset-react-app is part of the create-react-app project, which
+is not maintianed anymore. It is thus unlikely that this bug will
+ever be fixed. Add "@babel/plugin-proposal-private-property-in-object" to
+your devDependencies to work around this error. This will make this message
+go away.
+
+Terminate batch job (Y/N)?
+Terminate batch job (Y/N)? y
+
+C:\Users\poiut\Documents\product-tracking\product-tracking-frontend>npm start
+
+> product-tracking-frontend@0.1.0 start
+> react-scripts start
+
+(node:9708) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:9708) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+Compiled successfully!
+
+You can now view product-tracking-frontend in the browser.
+
+  Local:            http://localhost:3000
+  On Your Network:  http://192.168.56.1:3000
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled successfully
+Compiling...
+Compiled successfully!
+
+You can now view product-tracking-frontend in the browser.
+
+  Local:            http://localhost:3000
+  On Your Network:  http://192.168.56.1:3000
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled successfully
+One of your dependencies, babel-preset-react-app, is importing the
+"@babel/plugin-proposal-private-property-in-object" package without
+declaring it in its dependencies. This is currently working because
+"@babel/plugin-proposal-private-property-in-object" is already in your
+node_modules folder for unrelated reasons, but it may break at any time.
+
+babel-preset-react-app is part of the create-react-app project, which
+is not maintianed anymore. It is thus unlikely that this bug will
+ever be fixed. Add "@babel/plugin-proposal-private-property-in-object" to
+your devDependencies to work around this error. This will make this message
+go away.
+Compiling...
+Compiled successfully!
+
+You can now view product-tracking-frontend in the browser.
+
+  Local:            http://localhost:3000
+  On Your Network:  http://192.168.56.1:3000
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled successfully
+Compiling...
+Compiled successfully!
+
+You can now view product-tracking-frontend in the browser.
+
+  Local:            http://localhost:3000
+  On Your Network:  http://192.168.56.1:3000
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled successfully
+Compiling...
+Compiled successfully!
+
+You can now view product-tracking-frontend in the browser.
+
+  Local:            http://localhost:3000
+  On Your Network:  http://192.168.56.1:3000
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled successfully
+Compiling...
+Compiled successfully!
+
+You can now view product-tracking-frontend in the browser.
+
+  Local:            http://localhost:3000
+  On Your Network:  http://192.168.56.1:3000
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled successfully
+Compiling...
+Compiled with warnings.
+
+[eslint]
+src\App.js
+  Line 10:7:  'chainId' is assigned a value but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint]
+src\App.js
+  Line 10:7:  'chainId' is assigned a value but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled successfully!
+
+You can now view product-tracking-frontend in the browser.
+
+  Local:            http://localhost:3000
+  On Your Network:  http://192.168.56.1:3000
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled successfully
+Compiling...
+Compiled successfully!
+
+You can now view product-tracking-frontend in the browser.
+
+  Local:            http://localhost:3000
+  On Your Network:  http://192.168.56.1:3000
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled successfully
+Compiling...
+Compiled successfully!
+
+You can now view product-tracking-frontend in the browser.
+
+  Local:            http://localhost:3000
+  On Your Network:  http://192.168.56.1:3000
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled successfully
+Compiling...
+Failed to compile.
+
+SyntaxError: C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\src\App.js: Unterminated JSX contents. (524:23)
+  522 |                     onChange={handleInputChange}
+  523 |                   />
+> 524 |                 </Grid>
+      |                        ^
+  525 |
+  526 |
+  527 |
+ERROR in ./src/App.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\src\App.js: Unterminated JSX contents. (524:23)
+
+  522 |                     onChange={handleInputChange}
+  523 |                   />
+> 524 |                 </Grid>
+      |                        ^
+  525 |
+  526 |
+  527 |
+    at constructor (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:349:19)
+    at FlowParserMixin.raise (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:3247:19)
+    at FlowParserMixin.jsxReadToken (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:6486:20)
+    at FlowParserMixin.getTokenFromCode (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:6812:12)
+    at FlowParserMixin.getTokenFromCode (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:5317:13)
+    at FlowParserMixin.nextToken (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:2430:10)
+    at FlowParserMixin.next (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:2343:10)
+    at FlowParserMixin.eat (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:2347:12)
+    at FlowParserMixin.expect (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:3576:15)
+    at FlowParserMixin.jsxParseClosingElementAt (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:6718:10)
+    at FlowParserMixin.jsxParseElementAt (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:6733:37)
+    at FlowParserMixin.jsxParseElementAt (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:6736:32)
+    at FlowParserMixin.jsxParseElementAt (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:6736:32)
+    at FlowParserMixin.jsxParseElementAt (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:6736:32)
+    at FlowParserMixin.jsxParseElementAt (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:6736:32)
+    at FlowParserMixin.jsxParseElementAt (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:6736:32)
+    at FlowParserMixin.jsxParseElementAt (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:6736:32)
+    at FlowParserMixin.jsxParseElement (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:6787:17)
+    at FlowParserMixin.parseExprAtom (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:6797:19)
+    at FlowParserMixin.parseExprSubscripts (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10562:23)
+    at FlowParserMixin.parseUpdate (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10547:21)
+    at FlowParserMixin.parseMaybeUnary (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10527:23)
+    at FlowParserMixin.parseMaybeUnaryOrPrivate (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10381:61)
+    at FlowParserMixin.parseExprOps (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10386:23)
+    at FlowParserMixin.parseMaybeConditional (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10363:23)
+    at FlowParserMixin.parseMaybeAssign (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10326:21)
+    at C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:5618:39
+    at FlowParserMixin.tryParse (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:3585:20)
+    at FlowParserMixin.parseMaybeAssign (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:5618:18)
+    at C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10296:39
+    at FlowParserMixin.allowInAnd (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:11911:12)
+    at FlowParserMixin.parseMaybeAssignAllowIn (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10296:17)
+    at FlowParserMixin.parseParenAndDistinguishExpression (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:11173:28)
+    at FlowParserMixin.parseParenAndDistinguishExpression (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:5711:18)
+    at FlowParserMixin.parseExprAtom (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10829:23)
+    at FlowParserMixin.parseExprAtom (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:6802:20)
+    at FlowParserMixin.parseExprSubscripts (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10562:23)
+    at FlowParserMixin.parseUpdate (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10547:21)
+    at FlowParserMixin.parseMaybeUnary (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10527:23)
+    at FlowParserMixin.parseMaybeUnaryOrPrivate (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10381:61)
+    at FlowParserMixin.parseExprOps (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10386:23)
+    at FlowParserMixin.parseMaybeConditional (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10363:23)
+    at FlowParserMixin.parseMaybeAssign (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10326:21)
+    at FlowParserMixin.parseMaybeAssign (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:5669:18)
+    at FlowParserMixin.parseExpressionBase (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10280:23)
+    at C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10276:39
+    at FlowParserMixin.allowInAnd (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:11906:16)
+    at FlowParserMixin.parseExpression (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10276:17)
+    at FlowParserMixin.parseReturnStatement (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:12596:28)
+    at FlowParserMixin.parseStatementContent (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:12248:21)
+
+ERROR in [eslint]
+src\App.js
+  Line 524:23:  Parsing error: Unterminated JSX contents. (524:23)
+
+webpack compiled with 2 errors
+Compiling...
+Compiled successfully!
+
+You can now view product-tracking-frontend in the browser.
+
+  Local:            http://localhost:3000
+  On Your Network:  http://192.168.56.1:3000
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled successfully
+Compiling...
+Compiled successfully!
+
+You can now view product-tracking-frontend in the browser.
+
+  Local:            http://localhost:3000
+  On Your Network:  http://192.168.56.1:3000
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled successfully
+Compiling...
+Failed to compile.
+
+SyntaxError: C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\src\App.js: Unterminated string constant. (515:20)
+  513 |       } catch (error) {
+  514 |         console.error('Error fetching product details:', error);
+> 515 |         toast.error('Erro
+      |                     ^
+  516 |
+  517 |
+ERROR in ./src/App.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\src\App.js: Unterminated string constant. (515:20)
+
+  513 |       } catch (error) {
+  514 |         console.error('Error fetching product details:', error);
+> 515 |         toast.error('Erro
+      |                     ^
+  516 |
+  517 |
+    at constructor (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:349:19)
+    at FlowParserMixin.raise (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:3247:19)
+    at Object.unterminated (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:2315:20)
+    at readStringContents (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:2058:16)
+    at FlowParserMixin.readString (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:3146:9)
+    at FlowParserMixin.getTokenFromCode (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:2906:14)
+    at FlowParserMixin.getTokenFromCode (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:6835:11)
+    at FlowParserMixin.getTokenFromCode (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:5317:13)
+    at FlowParserMixin.nextToken (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:2430:10)
+    at FlowParserMixin.next (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:2343:10)
+    at FlowParserMixin.parseCoverCallAndAsyncArrowHead (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10648:10)
+    at FlowParserMixin.parseSubscript (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10602:19)
+    at FlowParserMixin.parseSubscript (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:5770:18)
+    at FlowParserMixin.parseSubscripts (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10575:19)
+    at FlowParserMixin.parseSubscripts (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:5736:18)
+    at FlowParserMixin.parseExprSubscripts (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10566:17)
+    at FlowParserMixin.parseUpdate (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10547:21)
+    at FlowParserMixin.parseMaybeUnary (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10527:23)
+    at FlowParserMixin.parseMaybeUnaryOrPrivate (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10381:61)
+    at FlowParserMixin.parseExprOps (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10386:23)
+    at FlowParserMixin.parseMaybeConditional (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10363:23)
+    at FlowParserMixin.parseMaybeAssign (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10326:21)
+    at FlowParserMixin.parseMaybeAssign (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:5669:18)
+    at FlowParserMixin.parseExpressionBase (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10280:23)
+    at C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10276:39
+    at FlowParserMixin.allowInAnd (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:11906:16)
+    at FlowParserMixin.parseExpression (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10276:17)
+    at FlowParserMixin.parseStatementContent (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:12350:23)
+    at FlowParserMixin.parseStatementLike (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:12217:17)
+    at FlowParserMixin.parseStatementLike (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:5038:24)
+    at FlowParserMixin.parseStatementListItem (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:12197:17)
+    at FlowParserMixin.parseBlockOrModuleBlockBody (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:12770:61)
+    at FlowParserMixin.parseBlockBody (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:12763:10)
+    at FlowParserMixin.parseBlock (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:12751:10)
+    at C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:12672:72
+    at FlowParserMixin.withSmartMixTopicForbiddingContext (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:11888:14)
+    at FlowParserMixin.parseTryStatement (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:12672:26)
+    at FlowParserMixin.parseStatementContent (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:12254:21)
+    at FlowParserMixin.parseStatementLike (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:12217:17)
+    at FlowParserMixin.parseStatementLike (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:5038:24)
+    at FlowParserMixin.parseStatementListItem (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:12197:17)
+    at FlowParserMixin.parseBlockOrModuleBlockBody (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:12770:61)
+    at FlowParserMixin.parseBlockBody (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:12763:10)
+    at FlowParserMixin.parseBlock (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:12751:10)
+    at FlowParserMixin.parseStatementContent (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:12307:21)
+    at FlowParserMixin.parseStatementLike (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:12217:17)
+    at FlowParserMixin.parseStatementLike (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:5038:24)
+    at FlowParserMixin.parseStatementOrSloppyAnnexBFunctionDeclaration (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:12207:17)
+    at FlowParserMixin.parseIfStatement (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:12584:28)
+    at FlowParserMixin.parseStatementContent (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:12246:21)
+
+ERROR in [eslint]
+src\App.js
+  Line 515:20:  Parsing error: Unterminated string constant. (515:20)
+
+webpack compiled with 2 errors
+Compiling...
+Failed to compile.
+
+[eslint]
+src\App.js
+  Line 578:14:  'Typography' is not defined  react/jsx-no-undef
+
+Search for the keywords to learn more about each error.
+ERROR in [eslint]
+src\App.js
+  Line 578:14:  'Typography' is not defined  react/jsx-no-undef
+
+Search for the keywords to learn more about each error.
+
+webpack compiled with 1 error
+Compiling...
+Failed to compile.
+
+[eslint]
+src\App.js
+  Line 578:14:  'SectionTitle' is not defined  react/jsx-no-undef
+
+Search for the keywords to learn more about each error.
+ERROR in [eslint]
+src\App.js
+  Line 578:14:  'SectionTitle' is not defined  react/jsx-no-undef
+
+Search for the keywords to learn more about each error.
+
+webpack compiled with 1 error
+Compiling...
+Compiled successfully!
+
+You can now view product-tracking-frontend in the browser.
+
+  Local:            http://localhost:3000
+  On Your Network:  http://192.168.56.1:3000
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled successfully
+Compiling...
+Compiled successfully!
+
+You can now view product-tracking-frontend in the browser.
+
+  Local:            http://localhost:3000
+  On Your Network:  http://192.168.56.1:3000
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled successfully
+Compiling...
+Failed to compile.
+
+[eslint]
+src\App.js
+  Line 242:44:  'accountIndex' is not defined  no-undef
+  Line 244:51:  'accountIndex' is not defined  no-undef
+
+Search for the keywords to learn more about each error.
+ERROR in [eslint]
+src\App.js
+  Line 242:44:  'accountIndex' is not defined  no-undef
+  Line 244:51:  'accountIndex' is not defined  no-undef
+
+Search for the keywords to learn more about each error.
+
+webpack compiled with 1 error
+Compiling...
+Compiled successfully!
+
+You can now view product-tracking-frontend in the browser.
+
+  Local:            http://localhost:3000
+  On Your Network:  http://192.168.56.1:3000
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled successfully
+Compiling...
+Compiled successfully!
+
+You can now view product-tracking-frontend in the browser.
+
+  Local:            http://localhost:3000
+  On Your Network:  http://192.168.56.1:3000
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled successfully
+Compiling...
+Compiled with warnings.
+
+[eslint]
+src\App.js
+  Line 193:7:  'permissions' is assigned a value but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint]
+src\App.js
+  Line 193:7:  'permissions' is assigned a value but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled successfully!
+
+You can now view product-tracking-frontend in the browser.
+
+  Local:            http://localhost:3000
+  On Your Network:  http://192.168.56.1:3000
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled successfully
+Compiling...
+Failed to compile.
+
+SyntaxError: C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\src\App.js: Unterminated string constant. (472:20)
+  470 |       } catch (error) {
+  471 |         console.error('Error adding product:', error);
+> 472 |         toast.error('Error
+      |                     ^
+  473 |
+  474 |
+ERROR in ./src/App.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\src\App.js: Unterminated string constant. (472:20)
+
+  470 |       } catch (error) {
+  471 |         console.error('Error adding product:', error);
+> 472 |         toast.error('Error
+      |                     ^
+  473 |
+  474 |
+    at constructor (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:349:19)
+    at FlowParserMixin.raise (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:3247:19)
+    at Object.unterminated (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:2315:20)
+    at readStringContents (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:2058:16)
+    at FlowParserMixin.readString (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:3146:9)
+    at FlowParserMixin.getTokenFromCode (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:2906:14)
+    at FlowParserMixin.getTokenFromCode (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:6835:11)
+    at FlowParserMixin.getTokenFromCode (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:5317:13)
+    at FlowParserMixin.nextToken (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:2430:10)
+    at FlowParserMixin.next (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:2343:10)
+    at FlowParserMixin.parseCoverCallAndAsyncArrowHead (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10648:10)
+    at FlowParserMixin.parseSubscript (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10602:19)
+    at FlowParserMixin.parseSubscript (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:5770:18)
+    at FlowParserMixin.parseSubscripts (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10575:19)
+    at FlowParserMixin.parseSubscripts (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:5736:18)
+    at FlowParserMixin.parseExprSubscripts (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10566:17)
+    at FlowParserMixin.parseUpdate (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10547:21)
+    at FlowParserMixin.parseMaybeUnary (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10527:23)
+    at FlowParserMixin.parseMaybeUnaryOrPrivate (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10381:61)
+    at FlowParserMixin.parseExprOps (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10386:23)
+    at FlowParserMixin.parseMaybeConditional (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10363:23)
+    at FlowParserMixin.parseMaybeAssign (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10326:21)
+    at FlowParserMixin.parseMaybeAssign (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:5669:18)
+    at FlowParserMixin.parseExpressionBase (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10280:23)
+    at C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10276:39
+    at FlowParserMixin.allowInAnd (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:11906:16)
+    at FlowParserMixin.parseExpression (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:10276:17)
+    at FlowParserMixin.parseStatementContent (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:12350:23)
+    at FlowParserMixin.parseStatementLike (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:12217:17)
+    at FlowParserMixin.parseStatementLike (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:5038:24)
+    at FlowParserMixin.parseStatementListItem (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:12197:17)
+    at FlowParserMixin.parseBlockOrModuleBlockBody (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:12770:61)
+    at FlowParserMixin.parseBlockBody (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:12763:10)
+    at FlowParserMixin.parseBlock (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:12751:10)
+    at C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:12672:72
+    at FlowParserMixin.withSmartMixTopicForbiddingContext (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:11888:14)
+    at FlowParserMixin.parseTryStatement (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:12672:26)
+    at FlowParserMixin.parseStatementContent (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:12254:21)
+    at FlowParserMixin.parseStatementLike (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:12217:17)
+    at FlowParserMixin.parseStatementLike (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:5038:24)
+    at FlowParserMixin.parseStatementListItem (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:12197:17)
+    at FlowParserMixin.parseBlockOrModuleBlockBody (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:12770:61)
+    at FlowParserMixin.parseBlockBody (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:12763:10)
+    at FlowParserMixin.parseBlock (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:12751:10)
+    at FlowParserMixin.parseStatementContent (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:12307:21)
+    at FlowParserMixin.parseStatementLike (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:12217:17)
+    at FlowParserMixin.parseStatementLike (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:5038:24)
+    at FlowParserMixin.parseStatementOrSloppyAnnexBFunctionDeclaration (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:12207:17)
+    at FlowParserMixin.parseIfStatement (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:12584:28)
+    at FlowParserMixin.parseStatementContent (C:\Users\poiut\Documents\product-tracking\product-tracking-frontend\node_modules\@babel\parser\lib\index.js:12246:21)
+
+ERROR in [eslint]
+src\App.js
+  Line 472:20:  Parsing error: Unterminated string constant. (472:20)
+
+webpack compiled with 2 errors
+Compiling...
+Compiled successfully!
+
+You can now view product-tracking-frontend in the browser.
+
+  Local:            http://localhost:3000
+  On Your Network:  http://192.168.56.1:3000
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled successfully
+Compiling...
+Compiled with warnings.
+
+[eslint]
+src\App.js
+  Line 140:12:  Unexpected mix of '>' and '!=='. Use parentheses to clarify the intended order of operations  no-mixed-operators
+  Line 140:16:  Unexpected mix of '>' and '!=='. Use parentheses to clarify the intended order of operations  no-mixed-operators
+  Line 140:16:  Unexpected mix of '!==' and '>'. Use parentheses to clarify the intended order of operations  no-mixed-operators
+  Line 140:23:  Unexpected mix of '!==' and '>'. Use parentheses to clarify the intended order of operations  no-mixed-operators
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint]
+src\App.js
+  Line 140:12:  Unexpected mix of '>' and '!=='. Use parentheses to clarify the intended order of operations  no-mixed-operators
+  Line 140:16:  Unexpected mix of '>' and '!=='. Use parentheses to clarify the intended order of operations  no-mixed-operators
+  Line 140:16:  Unexpected mix of '!==' and '>'. Use parentheses to clarify the intended order of operations  no-mixed-operators
+  Line 140:23:  Unexpected mix of '!==' and '>'. Use parentheses to clarify the intended order of operations  no-mixed-operators
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint]
+src\App.js
+  Line 145:12:  Unexpected mix of '>' and '!=='. Use parentheses to clarify the intended order of operations  no-mixed-operators
+  Line 145:16:  Unexpected mix of '>' and '!=='. Use parentheses to clarify the intended order of operations  no-mixed-operators
+  Line 145:16:  Unexpected mix of '!==' and '>'. Use parentheses to clarify the intended order of operations  no-mixed-operators
+  Line 145:23:  Unexpected mix of '!==' and '>'. Use parentheses to clarify the intended order of operations  no-mixed-operators
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint]
+src\App.js
+  Line 145:12:  Unexpected mix of '>' and '!=='. Use parentheses to clarify the intended order of operations  no-mixed-operators
+  Line 145:16:  Unexpected mix of '>' and '!=='. Use parentheses to clarify the intended order of operations  no-mixed-operators
+  Line 145:16:  Unexpected mix of '!==' and '>'. Use parentheses to clarify the intended order of operations  no-mixed-operators
+  Line 145:23:  Unexpected mix of '!==' and '>'. Use parentheses to clarify the intended order of operations  no-mixed-operators
+
+webpack compiled with 1 warning

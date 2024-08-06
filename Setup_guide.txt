@@ -1,0 +1,121 @@
+Step-by-Step Guide to Set Up the Environment
+
+1. Install Node.js and npm
+
+Make sure Node.js and npm are installed. You can download and install them from nodejs.org.
+
+Verify the installations:
+
+bash
+
+node -v
+npm -v
+
+
+2. Install Git
+
+Ensure Git is installed. You can download and install it from git-scm.com.
+
+Verify the installation:
+
+bash
+
+git --version
+3. Clone the Repository
+Clone the project repository (assuming it's hosted on GitHub):
+
+bash
+
+git clone https://github.com/yourusername/product-tracking.git
+cd product-tracking
+
+
+4. Initialize a New React Project
+
+If you don’t already have a React project, create one using Create React App:
+
+bash
+
+npx create-react-app product-tracking-frontend
+cd product-tracking-frontend
+5. Install Dependencies
+Install the necessary npm packages:
+
+bash
+
+npm install ethers react-toastify qrcode.react
+Install React Scripts for CRA:
+
+bash
+
+npm install react-scripts
+
+
+6. Set Up Hardhat for Ethereum Development
+
+Navigate back to the project root directory and set up Hardhat:
+
+bash
+
+cd ..
+mkdir product-tracking-contracts
+cd product-tracking-contracts
+npm init -y
+npm install --save-dev hardhat
+
+Initialize Hardhat:
+
+bash
+
+npx hardhat
+
+
+Choose "Create a basic sample project" and follow the prompts. After setup, you should have a hardhat.config.js file.
+
+7. Configure Hardhat and Write the Smart Contract
+
+Replace the contents of contracts/Lock.sol with your ProductTracking.sol contract.
+
+8. Compile the Contract
+
+Compile the smart contract:
+
+bash
+
+npx hardhat compile
+
+9. Deploy the Contract
+
+Create a deployment script in scripts/deploy.js
+
+Deploy the contract to the local Hardhat network
+
+bash
+
+npx hardhat node
+
+In a new terminal, deploy the contract:
+
+bash
+
+npx hardhat run scripts/deploy.js --network localhost
+
+10. Connect Frontend to Smart Contract
+
+Copy the contract address from the deployment output and update the contractAddress variable in your React code:
+
+javascript
+
+const contractAddress = 'YOUR_CONTRACT_ADDRESS_HERE';
+Generate the ABI file from the compiled contract. Copy the ABI from artifacts/contracts/ProductTracking.sol/ProductTracking.json to product-tracking-frontend/src/ProductTrackingABI.json.
+
+11. Update Frontend Code
+Ensure your React code is in product-tracking-frontend/src/App.js
+
+Run the React Application
+Navigate to the React frontend directory and start the development server:
+
+bash
+
+cd product-tracking-frontend
+npm start
