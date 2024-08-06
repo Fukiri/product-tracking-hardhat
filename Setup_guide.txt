@@ -38,6 +38,7 @@ bash
 
 npx create-react-app product-tracking-frontend
 cd product-tracking-frontend
+
 5. Install Dependencies
 Install the necessary npm packages:
 
