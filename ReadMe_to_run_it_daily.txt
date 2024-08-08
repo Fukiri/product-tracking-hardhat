@@ -12,4 +12,4 @@ How do I access this project?
 9. Open another CMD in the folder.
 10. Run "npx hardhat run scripts/deploy.js --network localhost".
 11. Head to "localhost:3000".
-12. Confirm your Metamask wallet account.
+12. Confirm your Metamask wallet account. Reset the wallet if needed due to cache issues on Metamask.
