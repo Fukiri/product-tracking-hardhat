@@ -1,121 +1,121 @@
 [
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": false,
-          "internalType": "string",
-          "name": "serialNumber",
-          "type": "string"
-        },
-        {
-          "indexed": false,
-          "internalType": "string",
-          "name": "newAddress",
-          "type": "string"
-        }
-      ],
-      "name": "ProductUpdated",
-      "type": "event"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "string",
-          "name": "_name",
-          "type": "string"
-        },
-        {
-          "internalType": "string",
-          "name": "_serialNumber",
-          "type": "string"
-        },
-        {
-          "internalType": "string",
-          "name": "_manufacturer",
-          "type": "string"
-        },
-        {
-          "internalType": "string",
-          "name": "_description",
-          "type": "string"
-        },
-        {
-          "internalType": "string[]",
-          "name": "_supplyLineAddresses",
-          "type": "string[]"
-        },
-        {
-          "internalType": "string",
-          "name": "_currentAddress",
-          "type": "string"
-        }
-      ],
-      "name": "addProduct",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "string",
-          "name": "_serialNumber",
-          "type": "string"
-        }
-      ],
-      "name": "getProduct",
-      "outputs": [
-        {
-          "internalType": "string",
-          "name": "name",
-          "type": "string"
-        },
-        {
-          "internalType": "string",
-          "name": "serialNumber",
-          "type": "string"
-        },
-        {
-          "internalType": "string",
-          "name": "manufacturer",
-          "type": "string"
-        },
-        {
-          "internalType": "string",
-          "name": "description",
-          "type": "string"
-        },
-        {
-          "internalType": "string[]",
-          "name": "supplyLineAddresses",
-          "type": "string[]"
-        },
-        {
-          "internalType": "string",
-          "name": "currentAddress",
-          "type": "string"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "string",
-          "name": "_serialNumber",
-          "type": "string"
-        },
-        {
-          "internalType": "string",
-          "name": "_newAddress",
-          "type": "string"
-        }
-      ],
-      "name": "updateCurrentAddress",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    }
-  ]
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "serialNumber",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "newAddress",
+        "type": "string"
+      }
+    ],
+    "name": "ProductUpdated",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "_name",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_serialNumber",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_manufacturer",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_description",
+        "type": "string"
+      },
+      {
+        "internalType": "string[]",
+        "name": "_supplyLineAddresses",
+        "type": "string[]"
+      },
+      {
+        "internalType": "string",
+        "name": "_currentAddress",
+        "type": "string"
+      }
+    ],
+    "name": "addProduct",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "_serialNumber",
+        "type": "string"
+      }
+    ],
+    "name": "getProduct",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "serialNumber",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "manufacturer",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "description",
+        "type": "string"
+      },
+      {
+        "internalType": "string[]",
+        "name": "supplyLineAddresses",
+        "type": "string[]"
+      },
+      {
+        "internalType": "string",
+        "name": "currentAddress",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "_serialNumber",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_newAddress",
+        "type": "string"
+      }
+    ],
+    "name": "updateCurrentAddress",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]
