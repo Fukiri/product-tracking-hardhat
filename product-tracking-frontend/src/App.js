@@ -4,12 +4,23 @@ import QRCode from "qrcode.react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import logo from "./assets/Group 1.svg";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+} from "react-router-dom";
+import SignupPage from "./home/SignupPage";
+import LoginPage from "./home/LoginPage";
+import LandingPage from "./home/landingPage";
 import ProductTrackingABI from "./ProductTrackingABI.json";
 const contractAddress = "0x5fbdb2315678afecb367f032d93f642f64180aa3";
 const chainId = 31337; // Chain ID for the local Hardhat network
 const accountIndex = 1; // Index of the account you want to use (0 for the first account, 1 for the second, etc.)
 
+
 function App() {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [product, setProduct] = useState({
     name: "",
     serialNumber: "",
@@ -216,187 +227,254 @@ function App() {
   }, []);
   return (
     <>
-      <div className="wrapper">
-        <img src={logo} alt="" className="logo" />
-        <div className="test">
-          {!showAddProductForm && !showTrackProductForm && (
-            <>
-              <p className="heading1">Let's get started!</p>
-              <br />
-            </>
-          )}
+      <Router>
+        <Routes>
+          <Route
+            path="/"
+            element={<LandingPage setIsAuthenticated={setIsAuthenticated} />}
+          />
 
-          {showAddProductForm && (
-            <>
-              <p className="heading1 addProduct">Add Product</p>
-              <br />
-            </>
-          )}
+          <Route path="/" element={<Navigate to="/app" />} />
 
-          {!showAddProductForm && !showTrackProductForm && (
-            <div className="options">
-              <button
-                className="addPro"
-                onClick={() => {
-                  setShowAddProductForm(true);
-                  setShowTrackProductForm(false);
-                }}
-              >
-                Add Product
-              </button>
-              <button
-                className="trackPro"
-                onClick={() => {
-                  setShowAddProductForm(false);
-                  setShowTrackProductForm(true);
-                }}
-              >
-                Track Product
-              </button>
-            </div>
-          )}
+          <Route
+            path="/signup"
+            element={<SignupPage setIsAuthenticated={setIsAuthenticated} />}
+          />
+          <Route
+            path="/login"
+            element={<LoginPage setIsAuthenticated={setIsAuthenticated} />}
+          />
 
-          {showAddProductForm && (
-            <div>
-              <button
-                className="goBack"
-                onClick={() => {
-                  setShowAddProductForm(false);
-                  setShowTrackProductForm(false);
-                }}
-              >
-                Go Back
-              </button>
-              <form onSubmit={handleSubmit}>
-                <div className="addProDetails">
-                  <input
-                    name="name"
-                    placeholder="Name"
-                    onChange={handleInputChange}
-                  />
-                  <input
-                    name="serialNumber"
-                    placeholder="Serial Number"
-                    onChange={handleInputChange}
-                  />
-                  <input
-                    name="manufacturer"
-                    placeholder="Manufacturer"
-                    onChange={handleInputChange}
-                  />
-                  <input
-                    name="description"
-                    placeholder="Description"
-                    onChange={handleInputChange}
-                  />
-                  <input
-                    name="supplyLineAddresses"
-                    placeholder="Supply Line Addresses "
-                    onChange={handleInputChange}
-                  />
-                  <input
-                    name="currentAddress"
-                    placeholder="Current Address"
-                    onChange={handleInputChange}
-                  />
-                  <input
-                    name="warrantyDetails"
-                    placeholder="Warranty Details"
-                    onChange={handleInputChange}
-                  />
-                  <input
-                    name="usageInstructions"
-                    placeholder="Usage Instructions"
-                    onChange={handleInputChange}
-                  />
-                </div>
-                <br />
-                <button type="submit" className="addProSub">
-                  Add Product
-                </button>
-              </form>
-              <div className="qrCode">
-                {qrValue && <QRCode value={qrValue} />}
-              </div>
-            </div>
-          )}
+          {isAuthenticated ? (
+            <Route
+              path="/app"
+              element={
+                <div className="wrapper">
+                
+                  <div className="test">
+                    {
+                      <div className="wrapper">
+                        <img src={logo} alt="" className="logo" />
+                        <div className="test">
+                          {!showAddProductForm && !showTrackProductForm && (
+                            <>
+                              <p className="heading1">Welcome to Etherweave</p>
+                              <br />
+                            </>
+                          )}
 
-          {showTrackProductForm && (
-            <div>
-              <button
-                className="goBack"
-                onClick={() => {
-                  setShowAddProductForm(false);
-                  setShowTrackProductForm(false);
-                }}
-              >
-                Go Back
-              </button>
-              <div className="trackProDetails">
-                <h1 className="heading1 trackProH">Check Product</h1>
-                <div className="box2">
-                  <input
-                    className="SN"
-                    name="serialNumberCheck"
-                    placeholder="Serial Number"
-                    value={serialNumberCheck}
-                    onChange={handleSerialNumberCheckChange}
-                  />
-                  <button className="trackProSub" onClick={handleCheckProduct}>
-                    Check Product
-                  </button>
+                          {showAddProductForm && (
+                            <>
+                              <p className="heading1 addProduct">Add Product</p>
+                              <br />
+                            </>
+                          )}
 
-                  <div className="proD">
-                    <h3 className="heading3">Product Details</h3>
-                    <div className="margin"></div>
-                    {productData && (
-                      <div className="wrapperPR">
-                        <p>
-                          {" "}
-                          <span className="span1">Name: </span>{" "}
-                          <span className="span2"> {productData[0]}</span>{" "}
-                        </p>
-                        <p>
-                          {" "}
-                          <span className="span1">Serial Number: </span>{" "}
-                          <span className="span2">{productData[1]}</span>{" "}
-                        </p>
-                        <p>
-                          {" "}
-                          <span className="span1">Manufacturer: </span>{" "}
-                          <span className="span2"> {productData[2]}</span>
-                        </p>
-                        <p>
-                          {" "}
-                          <span className="span1">Description: </span>{" "}
-                          <span className="span2">{productData[3]}</span>{" "}
-                        </p>
-                        <p>
-                          <span className="span1">
-                            {" "}
-                            Supply Line Addresses:{" "}
-                          </span>{" "}
-                          <span className="span2">
-                            {" "}
-                            {productData[4].join(", ")}
-                          </span>
-                        </p>
-                        <p>
-                          {" "}
-                          <span className="span1"> Current Address: </span>{" "}
-                          <span className="span2"> {productData[5]}</span>
-                        </p>
+                          {!showAddProductForm && !showTrackProductForm && (
+                            <div className="options">
+                              <button
+                                className="addPro"
+                                onClick={() => {
+                                  setShowAddProductForm(true);
+                                  setShowTrackProductForm(false);
+                                }}
+                              >
+                                Add Product
+                              </button>
+                              <button
+                                className="trackPro"
+                                onClick={() => {
+                                  setShowAddProductForm(false);
+                                  setShowTrackProductForm(true);
+                                }}
+                              >
+                                Track Product
+                              </button>
+                            </div>
+                          )}
+
+                          {showAddProductForm && (
+                            <div>
+                              <button
+                                className="goBack"
+                                onClick={() => {
+                                  setShowAddProductForm(false);
+                                  setShowTrackProductForm(false);
+                                }}
+                              >
+                                Go Back
+                              </button>
+                              <form onSubmit={handleSubmit}>
+                                <div className="addProDetails">
+                                  <input
+                                    name="name"
+                                    placeholder="Name"
+                                    onChange={handleInputChange}
+                                  />
+                                  <input
+                                    name="serialNumber"
+                                    placeholder="Serial Number"
+                                    onChange={handleInputChange}
+                                  />
+                                  <input
+                                    name="manufacturer"
+                                    placeholder="Manufacturer"
+                                    onChange={handleInputChange}
+                                  />
+                                  <input
+                                    name="description"
+                                    placeholder="Description"
+                                    onChange={handleInputChange}
+                                  />
+                                  <input
+                                    name="supplyLineAddresses"
+                                    placeholder="Supply Line Addresses "
+                                    onChange={handleInputChange}
+                                  />
+                                  <input
+                                    name="currentAddress"
+                                    placeholder="Current Address"
+                                    onChange={handleInputChange}
+                                  />
+                                  <input
+                                    name="warrantyDetails"
+                                    placeholder="Warranty Details"
+                                    onChange={handleInputChange}
+                                  />
+                                  <input
+                                    name="usageInstructions"
+                                    placeholder="Usage Instructions"
+                                    onChange={handleInputChange}
+                                  />
+                                </div>
+                                <br />
+                                <button type="submit" className="addProSub">
+                                  Add Product
+                                </button>
+                              </form>
+                              <div className="qrCode">
+                                {qrValue && <QRCode value={qrValue} />}
+                              </div>
+                            </div>
+                          )}
+
+                          {showTrackProductForm && (
+                            <div>
+                              <button
+                                className="goBack"
+                                onClick={() => {
+                                  setShowAddProductForm(false);
+                                  setShowTrackProductForm(false);
+                                }}
+                              >
+                                Go Back
+                              </button>
+                              <div className="trackProDetails">
+                                <h1 className="heading1 trackProH">
+                                  Check Product
+                                </h1>
+                                <div className="box2">
+                                  <input
+                                    className="SN"
+                                    name="serialNumberCheck"
+                                    placeholder="Serial Number"
+                                    value={serialNumberCheck}
+                                    onChange={handleSerialNumberCheckChange}
+                                  />
+                                  <button
+                                    className="trackProSub"
+                                    onClick={handleCheckProduct}
+                                  >
+                                    Check Product
+                                  </button>
+
+                                  <div className="proD">
+                                    <h3 className="heading3">
+                                      Product Details
+                                    </h3>
+                                    <div className="margin"></div>
+                                    {productData && (
+                                      <div className="wrapperPR">
+                                        <p>
+                                          {" "}
+                                          <span className="span1">
+                                            Name:{" "}
+                                          </span>{" "}
+                                          <span className="span2">
+                                            {" "}
+                                            {productData[0]}
+                                          </span>{" "}
+                                        </p>
+                                        <p>
+                                          {" "}
+                                          <span className="span1">
+                                            Serial Number:{" "}
+                                          </span>{" "}
+                                          <span className="span2">
+                                            {productData[1]}
+                                          </span>{" "}
+                                        </p>
+                                        <p>
+                                          {" "}
+                                          <span className="span1">
+                                            Manufacturer:{" "}
+                                          </span>{" "}
+                                          <span className="span2">
+                                            {" "}
+                                            {productData[2]}
+                                          </span>
+                                        </p>
+                                        <p>
+                                          {" "}
+                                          <span className="span1">
+                                            Description:{" "}
+                                          </span>{" "}
+                                          <span className="span2">
+                                            {productData[3]}
+                                          </span>{" "}
+                                        </p>
+                                        <p>
+                                          <span className="span1">
+                                            {" "}
+                                            Supply Line Addresses:{" "}
+                                          </span>{" "}
+                                          <span className="span2">
+                                            {" "}
+                                            {productData[4].join(", ")}
+                                          </span>
+                                        </p>
+                                        <p>
+                                          {" "}
+                                          <span className="span1">
+                                            {" "}
+                                            Current Address:{" "}
+                                          </span>{" "}
+                                          <span className="span2">
+                                            {" "}
+                                            {productData[5]}
+                                          </span>
+                                        </p>
+                                      </div>
+                                    )}
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          )}
+
+                          <ToastContainer />
+                        </div>
                       </div>
-                    )}
+                    }
                   </div>
                 </div>
-              </div>
-            </div>
+              }
+            />
+          ) : (
+            <Route path="*" element={<Navigate to="/login" />} />
           )}
-
-          <ToastContainer />
-        </div>
-      </div>
+        </Routes>
+      </Router>
     </>
   );
 }

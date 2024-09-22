@@ -36,10 +36,24 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.wrapper {
-  height: 100vh;
-  margin-bottom: 5vh;
+.Wrapper1{
+  width:900px ;
+  border: solid 2px;
 }
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: auto;
+  text-align: center;
+}
+
+.options {
+  margin-top: 20px; /* Adds space between the heading and buttons */
+}
+
 .logo {
   position: absolute;
   left: 2%;
@@ -70,8 +84,17 @@ body {
   width: 40vw;
   bottom: 30%;
 }
+.landH button{
+  margin: 20px;
+}
+.landHeading{
+   font-size: 5.5rem; /* Adjust as needed */
+  color: rgb(58, 59, 65); /* White text color */
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: white;
+}
 
-.options button,
+.options button,.landH button,
 .goBack {
   cursor: pointer;
   height: 7vh !important;
