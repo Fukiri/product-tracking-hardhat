@@ -11,13 +11,13 @@ import {
   Navigate,
 } from "react-router-dom";
 import SignupPage from "./home/SignupPage";
-import LoginPage from "./home/LoginPage";
+import Landing_LoginPage from "./home/LoginPage";
 import LandingPage from "./home/landingPage";
+import AdminPage from "./home/AdminPage";
 import ProductTrackingABI from "./ProductTrackingABI.json";
-const contractAddress = "0x5fbdb2315678afecb367f032d93f642f64180aa3";
+const contractAddress = " 0x5FbDB2315678afecb367f032d93F642f64180aa3";
 const chainId = 31337; // Chain ID for the local Hardhat network
 const accountIndex = 1; // Index of the account you want to use (0 for the first account, 1 for the second, etc.)
-
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -240,17 +240,13 @@ function App() {
             path="/signup"
             element={<SignupPage setIsAuthenticated={setIsAuthenticated} />}
           />
-          <Route
-            path="/login"
-            element={<LoginPage setIsAuthenticated={setIsAuthenticated} />}
-          />
+          <Route path="/admin" element={<AdminPage />} />
 
-          {isAuthenticated ? (
+          {isAuthenticated && (
             <Route
               path="/app"
               element={
                 <div className="wrapper">
-                
                   <div className="test">
                     {
                       <div className="wrapper">
@@ -294,16 +290,7 @@ function App() {
                           )}
 
                           {showAddProductForm && (
-                            <div>
-                              <button
-                                className="goBack"
-                                onClick={() => {
-                                  setShowAddProductForm(false);
-                                  setShowTrackProductForm(false);
-                                }}
-                              >
-                                Go Back
-                              </button>
+                            <div className="apd">
                               <form onSubmit={handleSubmit}>
                                 <div className="addProDetails">
                                   <input
@@ -350,6 +337,15 @@ function App() {
                                 <br />
                                 <button type="submit" className="addProSub">
                                   Add Product
+                                </button>
+                                <button
+                                  className="goBack"
+                                  onClick={() => {
+                                    setShowAddProductForm(false);
+                                    setShowTrackProductForm(false);
+                                  }}
+                                >
+                                  Go Back
                                 </button>
                               </form>
                               <div className="qrCode">
@@ -470,8 +466,6 @@ function App() {
                 </div>
               }
             />
-          ) : (
-            <Route path="*" element={<Navigate to="/login" />} />
           )}
         </Routes>
       </Router>

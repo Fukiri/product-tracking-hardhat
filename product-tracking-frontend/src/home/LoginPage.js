@@ -16,8 +16,13 @@ const LoginPage = ({ setIsAuthenticated }) => {
       });
       if (response.data.success) {
         alert("Login Successful!");
-        setIsAuthenticated(true); // Set authenticated to true
-        navigate("/app"); // Navigate to /app
+        setIsAuthenticated(true);
+        if (response.data.isAdmin) {
+          console.log(`Admin check: ${response.data.isAdmin}`);
+          navigate("/admin");
+        } else {
+          navigate("/app");
+        }
       } else {
         alert("Invalid credentials");
       }
