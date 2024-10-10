@@ -90,20 +90,7 @@ const Landing_LoginPage = ({ setIsAuthenticated }) => {
         </div>
         */}{" "}
       </div>
-      <button
-        onClick={() => {
-          setIsAuthenticated(true);
-          navigate("/app");
-        }}
-        style={{
-          position: "absolute",
-          right: "80px",
-          marginTop: "20px",
-          fontSize: "20px",
-        }}
-      >
-        Skip SignUp (For Development)
-      </button>
+      
     </div>
   );
 };
