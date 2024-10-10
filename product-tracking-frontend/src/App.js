@@ -15,7 +15,8 @@ import Landing_LoginPage from "./home/LoginPage";
 import LandingPage from "./home/landingPage";
 import AdminPage from "./home/AdminPage";
 import ProductTrackingABI from "./ProductTrackingABI.json";
-const contractAddress = " 0x5FbDB2315678afecb367f032d93F642f64180aa3";
+import SupplyLineMap from './SupplyLineMap';
+const contractAddress = "Your_contract_address";
 const chainId = 31337; // Chain ID for the local Hardhat network
 const accountIndex = 1; // Index of the account you want to use (0 for the first account, 1 for the second, etc.)
 
@@ -34,6 +35,14 @@ function App() {
   const [serialNumberCheck, setSerialNumberCheck] = useState("");
   const [productData, setProductData] = useState(null);
   const [qrValue, setQrValue] = useState("");
+
+  const pathCoordinates = [
+    { lat: 37.7749, lng: -122.4194 },  // San Francisco
+    { lat: 34.0522, lng: -118.2437 },  // Los Angeles
+    { lat: 36.1699, lng: -115.1398 }   // Las Vegas
+  ];
+
+  const currentLocation = { lat: 36.1699, lng: -115.1398 };
 
   useEffect(() => {
     async function checkProvider() {
@@ -286,6 +295,12 @@ function App() {
                               >
                                 Track Product
                               </button>
+
+                              {/* Map to show product supply line */}
+                              <SupplyLineMap
+                                pathCoordinates={pathCoordinates}
+                                currentLocation={currentLocation}
+                              />
                             </div>
                           )}
 
@@ -347,10 +362,20 @@ function App() {
                                 >
                                   Go Back
                                 </button>
+                                {/* Map to show product supply line */}
+                                <SupplyLineMap
+                                  pathCoordinates={pathCoordinates}
+                                  currentLocation={currentLocation}
+                                />
                               </form>
                               <div className="qrCode">
                                 {qrValue && <QRCode value={qrValue} />}
                               </div>
+                              
+                              <SupplyLineMap
+                                pathCoordinates={pathCoordinates}
+                                currentLocation={currentLocation}
+                              />
                             </div>
                           )}
 
