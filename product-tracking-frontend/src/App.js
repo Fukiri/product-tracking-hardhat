@@ -234,8 +234,8 @@ function App() {
             element={<LandingPage setIsAuthenticated={setIsAuthenticated} />}
           />
 
-          <Route path="/" element={<Navigate to="/app" />} />
-
+          //<Route path="/" element={<Navigate to="/app" />} />
+          <Route path="/" element={<Landing_LoginPage />} />
           <Route
             path="/signup"
             element={<SignupPage setIsAuthenticated={setIsAuthenticated} />}
