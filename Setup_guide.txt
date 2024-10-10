@@ -1,122 +1,74 @@
-Step-by-Step Guide to Set Up the Environment
+Setup Guide for EtherWeave
 
-1. Install Node.js and npm
+1. Prerequisites:
 
-Make sure Node.js and npm are installed. You can download and install them from nodejs.org.
+Before starting, ensure you have the following installed:
 
-Verify the installations:
-
-bash
-
-node -v
-npm -v
+Node.js (v14 or later)
+npm (comes with Node.js)
+MetaMask Extension (for interacting with the Ethereum blockchain)
+Hardhat (for local blockchain development)
 
 
-2. Install Git
-
-Ensure Git is installed. You can download and install it from git-scm.com.
-
-Verify the installation:
-
-bash
-
-git --version
-3. Clone the Repository
-Clone the project repository (assuming it's hosted on GitHub):
-
-bash
-
-git clone https://github.com/yourusername/product-tracking.git
-cd product-tracking
+2. Project Setup:
+Clone the Project: If you haven’t already cloned the project, do so with the following command:
 
 
-4. Initialize a New React Project
-
-If you don’t already have a React project, create one using Create React App:
-
-bash
-
-npx create-react-app product-tracking-frontend
-cd product-tracking-frontend
-
-5. Install Dependencies
-Install the necessary npm packages:
-
-bash
-
-npm install ethers react-toastify qrcode.react
-Install React Scripts for CRA:
-
-bash
-
-npm install react-scripts
+git clone https://github.com/your-username/etherweave.git
+cd etherweave
+Install Dependencies: In the project root, run the following command to install all the required Node.js dependencies:
 
 
-6. Set Up Hardhat for Ethereum Development
-
-Navigate back to the project root directory and set up Hardhat:
-
-bash
-
-cd ..
-mkdir product-tracking-contracts
-cd product-tracking-contracts
-npm init -y
-npm install --save-dev hardhat
-
-Initialize Hardhat:
-
-bash
-
-npx hardhat
+npm install
 
 
-Choose "Create a basic sample project" and follow the prompts. After setup, you should have a hardhat.config.js file.
+3. Set Up Environment Variables:
+Create .env File: Create a .env file in the project root with the following content:
 
-7. Configure Hardhat and Write the Smart Contract
 
-Replace the contents of contracts/Lock.sol with your ProductTracking.sol contract.
+REACT_APP_API_URL=http://localhost:5000
+REACT_APP_CONTRACT_ADDRESS={your_contract_address}
+REACT_APP_CHAIN_ID=31337
 
-8. Compile the Contract
+Ethereum Network Configuration:
 
-Compile the smart contract:
+Ensure you are using the correct contract address and chain ID.
+By default, the chainId is set to 31337 for local Hardhat testing.
 
-bash
 
-npx hardhat compile
+4. Running the Local Blockchain:
 
-9. Deploy the Contract
+Start Hardhat Network: In the project directory, open a terminal and run the following command to start the local blockchain:
 
-Create a deployment script in scripts/deploy.js
-
-Deploy the contract to the local Hardhat network
-
-bash
 
 npx hardhat node
 
-In a new terminal, deploy the contract:
+Deploy Contracts: In another terminal, deploy the smart contracts to the local Hardhat network:
 
-bash
 
 npx hardhat run scripts/deploy.js --network localhost
 
-10. Connect Frontend to Smart Contract
 
-Copy the contract address from the deployment output and update the contractAddress variable in your React code:
+5. MetaMask Configuration:
 
-javascript
+Connect MetaMask to Local Network:
+Open MetaMask and connect to the local Hardhat network.
 
-const contractAddress = 'YOUR_CONTRACT_ADDRESS_HERE';
-Generate the ABI file from the compiled contract. Copy the ABI from artifacts/contracts/ProductTracking.sol/ProductTracking.json to product-tracking-frontend/src/ProductTrackingABI.json.
+Use the following settings in MetaMask:
+Network Name: Localhost 8545
+RPC URL: http://127.0.0.1:8545
+Chain ID: 31337
 
-11. Update Frontend Code
-Ensure your React code is in product-tracking-frontend/src/App.js
+Import test accounts using the private keys provided by Hardhat when you run npx hardhat node.
 
-Run the React Application
-Navigate to the React frontend directory and start the development server:
 
-bash
+6. Running the Frontend:
 
-cd product-tracking-frontend
+Start the Frontend Application: To run the frontend in development mode, use the following command:
+
+
 npm start
+
+Access the Application: Open your browser and navigate to:
+
+http://localhost:3000
