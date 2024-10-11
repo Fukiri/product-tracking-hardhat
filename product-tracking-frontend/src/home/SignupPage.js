@@ -1,25 +1,29 @@
-import React, { useState } from "react";
-import axios from "axios";
-import logo from "../assets/Group 1.svg";
-import { useNavigate } from "react-router-dom";
-import "../App.css";
+import React, { useState } from "react"; // Import React and useState hook to manage component state
+import axios from "axios"; // Import axios to make HTTP requests
+import logo from "../assets/Group 1.svg"; // Import logo asset
+import { useNavigate } from "react-router-dom"; // Import useNavigate for navigation after successful signup
+import "../App.css"; // Import CSS for styling
 
 const SignupPage = ({ setIsAuthenticated }) => {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [userType, setUserType] = useState(""); // Default user type
-  const [company, setCompany] = useState(""); // For supplier/manufacturer
-  const [contact, setContact] = useState(""); // For supplier/manufacturer
-  const [country, setCountry] = useState(""); // For supplier/manufacturer
-  const navigate = useNavigate();
+  // State variables to manage the form input fields
+  const [firstName, setFirstName] = useState(""); // For the user's first name
+  const [lastName, setLastName] = useState(""); // For the user's last name
+  const [phoneNumber, setPhoneNumber] = useState(""); // For the user's phone number
+  const [email, setEmail] = useState(""); // For the user's email
+  const [password, setPassword] = useState(""); // For the user's password
+  const [userType, setUserType] = useState(""); // To capture user type (user, manufacturer, supplier)
+  const [company, setCompany] = useState(""); // For supplier/manufacturer's company name
+  const [contact, setContact] = useState(""); // For supplier/manufacturer's contact number
+  const [country, setCountry] = useState(""); // For supplier/manufacturer's country
 
+  const navigate = useNavigate(); // Initialize useNavigate for programmatic navigation
+
+  // Function to handle the signup process when the form is submitted
   const handleSignUp = async (e) => {
-    e.preventDefault();
+    e.preventDefault(); // Prevent the default form submission behavior
 
     try {
+      // Send a POST request to the signUpSM API with form data
       const response = await axios.post("http://localhost:5000/signUpSM", {
         first_name: firstName,
         last_name: lastName,
@@ -32,24 +36,26 @@ const SignupPage = ({ setIsAuthenticated }) => {
         user_type: userType,
       });
 
-      alert("Sign Up Successful!");
-      setIsAuthenticated(true);
-      navigate("/app");
+      // If sign up is successful
+      alert("Sign Up Successful!"); // Show a success message
+      setIsAuthenticated(true); // Set the user as authenticated
+      navigate("/app"); // Redirect to the app's main page
     } catch (err) {
-      console.error("Signup failed:", err);
+      console.error("Signup failed:", err); // Log any errors encountered during the request
+
+      // Check if there is a response from the server
       if (err.response) {
-        console.error("Response data:", err.response.data);
+        console.error("Response data:", err.response.data); // Log the server response
         alert(
           `Sign up failed: ${
-            err.response.data.error || err.response.data.message
+            err.response.data.error || err.response.data.message // Display the specific error message from the server
           }`
         );
       } else {
-        alert("Sign up failed. Please try again later.");
+        alert("Sign up failed. Please try again later."); // Display a generic error message if no server response
       }
     }
   };
-
   return (
     <div className="wrapper1">
       <img src={logo} alt="Logo" className="logo" />

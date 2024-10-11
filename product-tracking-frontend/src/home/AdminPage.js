@@ -1,21 +1,30 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import "../App.css"; 
+import "../App.css";
 import logo from "../assets/Group 1.svg";
 
 const AdminPage = () => {
+  // State management for users, manufacturers, suppliers, and selected entities for edit
   const [users, setUsers] = useState([]);
   const [manufacturers, setManufacturers] = useState([]);
   const [suppliers, setSuppliers] = useState([]);
   const [selectedUser, setSelectedUser] = useState(null);
   const [selectedManufacturer, setSelectedManufacturer] = useState(null);
   const [selectedSupplier, setSelectedSupplier] = useState(null);
+
+  // State to manage form visibility for adding or editing users, manufacturers, and suppliers
   const [showAddUserForm, setShowAddUserForm] = useState(false);
   const [showAddManufacturerForm, setShowAddManufacturerForm] = useState(false);
   const [showAddSupplierForm, setShowAddSupplierForm] = useState(false);
-  const [isEditMode, setIsEditMode] = useState(false); 
-  const [editEntityId, setEditEntityId] = useState(null); 
+
+  // State to manage edit mode and entity ID being edited
+  const [isEditMode, setIsEditMode] = useState(false);
+  const [editEntityId, setEditEntityId] = useState(null);
+
+  // State for button text (changes based on edit mode)
   const [buttonText, setButtonText] = useState("Create User");
+
+  // State for storing new user data
   const [newUser, setNewUser] = useState({
     first_name: "",
     last_name: "",
@@ -23,6 +32,8 @@ const AdminPage = () => {
     email_address: "",
     password: "",
   });
+
+  // Effect hook to update button text when entering or exiting edit mode
   useEffect(() => {
     if (isEditMode) {
       setButtonText("Edit User");
@@ -30,6 +41,7 @@ const AdminPage = () => {
       setButtonText("Create User");
     }
   }, [isEditMode]);
+
   // State for new manufacturer form
   const [newManufacturer, setNewManufacturer] = useState({
     company_name: "",
@@ -48,8 +60,10 @@ const AdminPage = () => {
     country: "",
   });
 
-  const [activeTab, setActiveTab] = useState("users"); // State to manage tabs
+  // State to manage active tab (users, manufacturers, or suppliers)
+  const [activeTab, setActiveTab] = useState("users");
 
+  // Fetch users from the backend API
   const fetchUsers = async () => {
     try {
       const response = await axios.get("http://localhost:5000/admin/users");
@@ -59,6 +73,7 @@ const AdminPage = () => {
     }
   };
 
+  // Fetch manufacturers from the backend API
   const fetchManufacturers = async () => {
     try {
       const response = await axios.get(
@@ -70,6 +85,7 @@ const AdminPage = () => {
     }
   };
 
+  // Fetch suppliers from the backend API
   const fetchSuppliers = async () => {
     try {
       const response = await axios.get("http://localhost:5000/admin/suppliers");
@@ -79,12 +95,14 @@ const AdminPage = () => {
     }
   };
 
+  // Effect hook to fetch all users, manufacturers, and suppliers when the component mounts
   useEffect(() => {
     fetchUsers();
     fetchManufacturers();
     fetchSuppliers();
   }, []);
 
+  // Function to handle adding or updating a user
   const handleAddUser = async (e) => {
     e.preventDefault();
     try {
@@ -96,6 +114,7 @@ const AdminPage = () => {
       } else {
         await axios.post("http://localhost:5000/admin/users", newUser);
       }
+      // Reset form and update the state after adding or updating a user
       setNewUser({
         first_name: "",
         last_name: "",
@@ -113,6 +132,7 @@ const AdminPage = () => {
     }
   };
 
+  // Function to handle adding or updating a manufacturer
   const handleAddManufacturer = async (e) => {
     e.preventDefault();
     try {
@@ -127,6 +147,7 @@ const AdminPage = () => {
           newManufacturer
         );
       }
+      // Reset form and update the state after adding or updating a manufacturer
       setNewManufacturer({
         company_name: "",
         contact_number: "",
@@ -144,6 +165,7 @@ const AdminPage = () => {
     }
   };
 
+  // Function to handle adding or updating a supplier
   const handleAddSupplier = async (e) => {
     e.preventDefault();
     try {
@@ -155,6 +177,7 @@ const AdminPage = () => {
       } else {
         await axios.post("http://localhost:5000/admin/suppliers", newSupplier);
       }
+      // Reset form and update the state after adding or updating a supplier
       setNewSupplier({
         company_name: "",
         contact_number: "",
@@ -172,32 +195,35 @@ const AdminPage = () => {
     }
   };
 
+  // Function to handle deleting a user
   const handleDeleteUser = async (email_address) => {
     try {
       await axios.delete(`http://localhost:5000/admin/users/${email_address}`);
-      fetchUsers();
+      fetchUsers(); // Refresh the users list after deletion
     } catch (error) {
       console.error("Error deleting user:", error);
     }
   };
 
+  // Function to handle deleting a manufacturer
   const handleDeleteManufacturer = async (email_address) => {
     try {
       await axios.delete(
         `http://localhost:5000/admin/manufacturers/${email_address}`
       );
-      fetchManufacturers();
+      fetchManufacturers(); // Refresh the manufacturers list after deletion
     } catch (error) {
       console.error("Error deleting manufacturer:", error);
     }
   };
 
+  // Function to handle deleting a supplier
   const handleDeleteSupplier = async (email_address) => {
     try {
       await axios.delete(
         `http://localhost:5000/admin/suppliers/${email_address}`
       );
-      fetchSuppliers();
+      fetchSuppliers(); // Refresh the suppliers list after deletion
     } catch (error) {
       console.error("Error deleting supplier:", error);
     }
@@ -205,24 +231,26 @@ const AdminPage = () => {
 
   // Function to handle editing a user
   const handleEditUser = (user) => {
-    setNewUser(user); 
-    setShowAddUserForm(true); 
-    setIsEditMode(true); 
-    setEditEntityId(user.email_address); 
+    setNewUser(user); // Load the user data into the form
+    setShowAddUserForm(true); // Show the user form
+    setIsEditMode(true); // Enable edit mode
+    setEditEntityId(user.email_address); // Set the entity being edited
   };
 
+  // Function to handle editing a manufacturer
   const handleEditManufacturer = (manufacturer) => {
-    setNewManufacturer(manufacturer); 
-    setShowAddManufacturerForm(true);
-    setIsEditMode(true); 
-    setEditEntityId(manufacturer.email_address);
+    setNewManufacturer(manufacturer); // Load the manufacturer data into the form
+    setShowAddManufacturerForm(true); // Show the manufacturer form
+    setIsEditMode(true); // Enable edit mode
+    setEditEntityId(manufacturer.email_address); // Set the entity being edited
   };
 
+  // Function to handle editing a supplier
   const handleEditSupplier = (supplier) => {
-    setNewSupplier(supplier); 
-    setShowAddSupplierForm(true); 
-    setIsEditMode(true); 
-    setEditEntityId(supplier.email_address); 
+    setNewSupplier(supplier); // Load the supplier data into the form
+    setShowAddSupplierForm(true); // Show the supplier form
+    setIsEditMode(true); // Enable edit mode
+    setEditEntityId(supplier.email_address); // Set the entity being edited
   };
   return (
     <div>

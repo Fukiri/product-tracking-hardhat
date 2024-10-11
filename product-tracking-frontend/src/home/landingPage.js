@@ -1,36 +1,45 @@
-import { useNavigate } from "react-router-dom";
-import logo from "../assets/Group 1.svg";
-import "../App.css";
-import React, { useState } from "react";
-import axios from "axios";
+import { useNavigate } from "react-router-dom"; // Import the useNavigate hook for programmatic navigation
+import logo from "../assets/Group 1.svg"; // Import the logo asset
+import "../App.css"; // Import the app-wide CSS
+import React, { useState } from "react"; // Import React and useState hook to manage component state
+import axios from "axios"; // Import axios for making HTTP requests
 
 const Landing_LoginPage = ({ setIsAuthenticated }) => {
+  // State variables to manage email and password input fields
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const navigate = useNavigate();
 
+  const navigate = useNavigate(); // Initialize useNavigate for page navigation
+
+  // Function to handle login submission
   const handleLogin = async (e) => {
-    e.preventDefault();
+    e.preventDefault(); // Prevent the default form submission behavior
+
     try {
+      // Send a POST request to the login API with email and password
       const response = await axios.post("http://localhost:5000/login", {
         email,
         password,
       });
+
+      // Check if login was successful
       if (response.data.success) {
         alert("Login Successful!");
-        setIsAuthenticated(true);
+        setIsAuthenticated(true); // Set the user as authenticated
         if (response.data.isAdmin) {
+          // If the user is an admin, navigate to the admin dashboard
           console.log(`Admin check: ${response.data.isAdmin}`);
           navigate("/admin");
         } else {
+          // If the user is not an admin, navigate to the regular app
           navigate("/app");
         }
       } else {
-        alert("Invalid credentials");
+        alert("Invalid credentials"); // Show error if login fails due to wrong credentials
       }
     } catch (err) {
-      console.error(err);
-      alert("Login Failed");
+      console.error(err); // Log any error encountered during login
+      alert("Login Failed"); // Show error alert for failed login
     }
   };
 
@@ -90,7 +99,6 @@ const Landing_LoginPage = ({ setIsAuthenticated }) => {
         </div>
         */}{" "}
       </div>
-      
     </div>
   );
 };
