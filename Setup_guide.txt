@@ -61,8 +61,35 @@ Chain ID: 31337
 
 Import test accounts using the private keys provided by Hardhat when you run npx hardhat node.
 
+8. Running the Database:
 
-6. Running the Frontend:
+Install PostgreSQL: Ensure you have PostgreSQL installed from the official site.
+
+Configure the Database:
+
+Navigate to the product-tracking-hardhat/product-tracking-database directory.
+Open a terminal and create the necessary tables and mock data by running:
+
+psql -U postgres -f setup_database.sql
+
+Enter the PostgreSQL password you have configured during installation when prompted.
+
+
+Configure Express Server:
+
+Open the index.js file located in the product-tracking-hardhat/product-tracking-database directory.
+Replace the placeholder on line 17 with your PostgreSQL password to connect to the database.
+Start the Express Server:
+
+In the same directory, run the following command to start the backend server:
+bash
+Copy code
+node index.js
+The server will now listen at http://localhost:5000 and connect to the PostgreSQL database for backend operations.
+
+See database_setup README.md file for detailed setup guide
+
+7. Running the Frontend:
 
 Start the Frontend Application: To run the frontend in development mode, use the following command:
 

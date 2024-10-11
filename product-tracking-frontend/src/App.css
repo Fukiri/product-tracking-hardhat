@@ -128,7 +128,6 @@ body {
 .addProDetails {
   justify-content: center;
   align-items: center;
-  border: solid;
   display: flex;
   flex-wrap: wrap;
   gap: 1vw;

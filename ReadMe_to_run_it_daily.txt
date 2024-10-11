@@ -11,5 +11,6 @@ How do I access this project?
 8. Leave the terminal as it is for logs.
 9. Open another CMD in the folder.
 10. Run "npx hardhat run scripts/deploy.js --network localhost".
+11. Refer to database_setup README.md file for guide to create database and running it. 
 11. Head to "localhost:3000".
 12. Confirm your Metamask wallet account. Reset the wallet if needed due to cache issues on Metamask.
